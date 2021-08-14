@@ -5,7 +5,7 @@
     box-shadow: 0 8px 32px 0 rgba(83, 89, 179, 0.37);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    border-radius: 30px;
+    border-radius: $container-border-radius;
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin: 0 20px;
@@ -17,9 +17,7 @@
   
   .weatherWrapper {
     padding: 30px;
-    background-color: $left-wrapper;
-    color:$primary-color;
-    
+    color: $primary-color;
   }
   
   .locationTitle {
@@ -36,7 +34,8 @@
     background-color: rgb(247, 247, 247);
     padding: 30px;
     text-align: right;
-    border-radius: 0 30px 30px 0;
+    border-radius: 0 $container-border-radius $container-border-radius 0;
+    color: $secondary-color;
   }
   
   .titleAndSearch {
@@ -49,14 +48,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
-    border-radius: 20px;
+    border-radius: $container-border-radius;
     margin-bottom: 20px;
-    color:$secondary-color;
   }
   
   .statsCard {
     background: rgba(255, 255, 255, 0.95);
-    border-radius: 20px;
+    border-radius: $container-border-radius;
     padding: 20px;
   }
   
@@ -77,7 +75,7 @@
     color: #303030;
     font-size: 20px;
     text-align: right;
-    border-radius: 10px;
+    border-radius: $container-border-radius;
     font-family: "Varela Round", sans-serif;
     font-size: 18px;
   }
@@ -101,15 +99,25 @@
     padding: 20px;
     margin: 0 auto;
   }
+
+  .fixed-position {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    opacity: 0.5;
+  }
   
   .errSearchInput {
     max-width: 100%;
   }
-
-  .hide {
-      display:none;
-  }
   
+  .hide {
+      display: none;
+  }
+
   @media only screen and (max-width: 950px) {
     .wrapper {
       display: grid;
